@@ -1,0 +1,7 @@
+[deployment]
+run = ["gunicorn", "--bind", "0.0.0.0:3000", "main:app"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
